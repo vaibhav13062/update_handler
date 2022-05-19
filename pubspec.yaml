@@ -1,7 +1,8 @@
 name: update_handler
-description: A new Flutter project.
+description: Update Handler
 version: 0.0.1
 homepage: vaibhavchandolia.info
+repository: https://github.com/vaibhav13062/update_handler
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
