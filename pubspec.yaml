@@ -1,7 +1,7 @@
 name: update_handler
 description: Update Handler
 version: 0.0.1
-homepage: vaibhavchandolia.info
+homepage: https://vaibhavchandolia.info
 repository: https://github.com/vaibhav13062/update_handler
 
 environment:
