@@ -41,6 +41,28 @@ class UpdateHandler {
   }
 
   // PackageInfo packageInfo = await PackageInfo.fromPlatform();
+
+  Future<bool> isForceUpdateAvailable({required int lastForceBuildNo}) async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    // String version = packageInfo.version;
+    String buildNumber = packageInfo.buildNumber;
+    if (lastForceBuildNo > int.parse(buildNumber)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  Future<bool> isSoftUpdateAvailable({required int latestBuildNo}) async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    String buildNumber = packageInfo.buildNumber;
+    if (latestBuildNo > int.parse(buildNumber)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   Future<bool> isUpdateAvailable(
       {required int latestBuildNo,
       required int lastForceBuildNo,

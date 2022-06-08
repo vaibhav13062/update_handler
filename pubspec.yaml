@@ -1,6 +1,6 @@
 name: update_handler
-description: This package is used for Update handling .\nThere are two types of update -\n - Force Update\n - Soft Update\nIn Force Update user cannot proceed further without update the app updating in mandatory\nIn Soft update you simply get a popup that update is available updating is optional.\nlastForceBuildNo - means last build no you want to force update .\nlastBuildNo - means latest buildNo.
-version: 0.0.3
+description: This package is used for Update handling. There are two types of update Force Update - Soft Update
+version: 0.0.4
 homepage: https://vaibhavchandolia.info
 repository: https://github.com/vaibhav13062/update_handler
 
