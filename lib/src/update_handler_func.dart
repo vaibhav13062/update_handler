@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:store_redirect/store_redirect.dart';
 import 'package:update_handler/src/inner_functions.dart';
 
 class UpdateHandler {
