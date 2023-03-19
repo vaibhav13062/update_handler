@@ -67,6 +67,7 @@ class UpdateHandler {
       {required int latestBuildNo,
       required int lastForceBuildNo,
       required BuildContext context,
+      required VoidCallback onNotNowClick,
       // required String latestVersion,
       String? title,
       String? content}) async {
@@ -78,25 +79,27 @@ class UpdateHandler {
       //FORCE UPDATE
       if (Platform.isIOS) {
         InnerFunctions(context).showIosPopUp(true, title ?? "Update Available",
-            content ?? "Please Update to Continue", iosAppId);
+            content ?? "Please Update to Continue", iosAppId, () {});
       } else if (Platform.isAndroid) {
         InnerFunctions(context).showAndroidPopUp(
             true,
             title ?? "Update Available",
             content ?? "Please Update to Continue",
-            androidAppId);
+            androidAppId,
+            () {});
       }
       return true;
     } else if (latestBuildNo > int.parse(buildNumber)) {
       if (Platform.isIOS) {
         InnerFunctions(context).showIosPopUp(false, title ?? "Update Available",
-            content ?? "New Update is Available", iosAppId);
+            content ?? "New Update is Available", iosAppId, onNotNowClick!);
       } else if (Platform.isAndroid) {
         InnerFunctions(context).showAndroidPopUp(
             false,
             title ?? "Update Available",
             content ?? "New Update is Available",
-            androidAppId);
+            androidAppId,
+            onNotNowClick!);
       }
       //NORMAL UPDATE
       return true;

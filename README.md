@@ -22,7 +22,7 @@ You just need to pass latestBuildNo,lastForceBuildNo,BuildContext , title & cont
 
 
 ```dart
-UpdateHandler().isUpdateAvailable(latestBuildNo: 11, lastForceBuildNo: 10, context: context);
+UpdateHandler().isUpdateAvailable(latestBuildNo: 11, lastForceBuildNo: 10, context: context,onNotNowClick: () {});
 ```
 OR
 ```dart
@@ -30,6 +30,7 @@ UpdateHandler().isUpdateAvailable(
 latestBuildNo: 11,
 lastForceBuildNo: 10,
 context: context,
+onNotNowClick: () {},
 title: "UPDATE NOW",
 content: "NEW APP UPDATE AVAILABLE PLEASE UPDATE ASAP");
 ```

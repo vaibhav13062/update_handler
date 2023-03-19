@@ -7,7 +7,7 @@ class InnerFunctions {
   InnerFunctions(this.context);
 
   showIosPopUp( bool forceUpdate, String title,
-      String content, String? iosAppId) {
+      String content, String? iosAppId,VoidCallback onNotNowCLick) {
     return showDialog(
         barrierDismissible: !forceUpdate,
         context: context,
@@ -50,6 +50,7 @@ class InnerFunctions {
                     CupertinoDialogAction(
                       child: const Text("Not Now"),
                       onPressed: () {
+                        onNotNowCLick();
                         Navigator.of(context).pop();
                       },
                     )
@@ -59,7 +60,7 @@ class InnerFunctions {
   }
 
   showAndroidPopUp( bool forceUpdate, String title,
-      String content, String? androidAppId) {
+      String content, String? androidAppId,VoidCallback onNotNowCLick) {
     return showDialog(
         barrierDismissible: !forceUpdate,
         context: context,
@@ -102,6 +103,7 @@ class InnerFunctions {
                     TextButton(
                       child: const Text("Not Now"),
                       onPressed: () {
+                        onNotNowCLick();
                         Navigator.of(context).pop();
                       },
                     )
