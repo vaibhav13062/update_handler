@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:store_redirect/store_redirect.dart';
 
 class InnerFunctions {
-  showIosPopUp(BuildContext context, bool forceUpdate, String title,
+   BuildContext context;
+  InnerFunctions(this.context);
+
+  showIosPopUp( bool forceUpdate, String title,
       String content, String? iosAppId) {
     return showDialog(
         barrierDismissible: !forceUpdate,
@@ -55,7 +58,7 @@ class InnerFunctions {
         });
   }
 
-  showAndroidPopUp(BuildContext context, bool forceUpdate, String title,
+  showAndroidPopUp( bool forceUpdate, String title,
       String content, String? androidAppId) {
     return showDialog(
         barrierDismissible: !forceUpdate,

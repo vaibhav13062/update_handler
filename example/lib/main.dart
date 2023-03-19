@@ -50,13 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       lastForceBuildNo: 10,
                       context: context);
                 },
-                child: Text("Force Updaste Popup")),
+                child: const Text("Force Update Popup")),
             ElevatedButton(
                 onPressed: () {
                   UpdateHandler().isUpdateAvailable(
                       latestBuildNo: 10, lastForceBuildNo: 8, context: context);
                 },
-                child: Text("Soft Updaste Popup"))
+                child: const Text("Soft Update Popup"))
           ],
         ),
       ),

@@ -77,15 +77,10 @@ class UpdateHandler {
     if (lastForceBuildNo > int.parse(buildNumber)) {
       //FORCE UPDATE
       if (Platform.isIOS) {
-        InnerFunctions().showIosPopUp(
-            context,
-            true,
-            title ?? "Update Available",
-            content ?? "Please Update to Continue",
-            iosAppId);
+        InnerFunctions(context).showIosPopUp(true, title ?? "Update Available",
+            content ?? "Please Update to Continue", iosAppId);
       } else if (Platform.isAndroid) {
-        InnerFunctions().showAndroidPopUp(
-            context,
+        InnerFunctions(context).showAndroidPopUp(
             true,
             title ?? "Update Available",
             content ?? "Please Update to Continue",
@@ -94,15 +89,10 @@ class UpdateHandler {
       return true;
     } else if (latestBuildNo > int.parse(buildNumber)) {
       if (Platform.isIOS) {
-        InnerFunctions().showIosPopUp(
-            context,
-            false,
-            title ?? "Update Available",
-            content ?? "New Update is Available",
-            iosAppId);
+        InnerFunctions(context).showIosPopUp(false, title ?? "Update Available",
+            content ?? "New Update is Available", iosAppId);
       } else if (Platform.isAndroid) {
-        InnerFunctions().showAndroidPopUp(
-            context,
+        InnerFunctions(context).showAndroidPopUp(
             false,
             title ?? "Update Available",
             content ?? "New Update is Available",
