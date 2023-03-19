@@ -1,6 +1,6 @@
 name: update_handler
 description: This package is used for Update handling. There are two types of update Force Update - Soft Update
-version: 0.0.7
+version: 0.0.8
 homepage: https://vaibhavchandolia.info
 repository: https://github.com/vaibhav13062/update_handler
 

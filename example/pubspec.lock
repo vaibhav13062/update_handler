@@ -281,10 +281,10 @@ packages:
     dependency: "direct main"
     description:
       name: update_handler
-      sha256: "6ad65f23added853ceb5f34f85459c2ad334e790e5aca9670e97a0a1c45e004a"
+      sha256: "0d21bf19712ecca48c851e9be9290bca6b19ab8a9db76ea40ad173834938a3db"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.6"
+    version: "0.0.7"
   vector_math:
     dependency: transitive
     description:

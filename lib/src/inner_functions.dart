@@ -9,7 +9,8 @@ class InnerFunctions {
   showIosPopUp( bool forceUpdate, String title,
       String content, String? iosAppId,VoidCallback onNotNowCLick) {
     return showDialog(
-        barrierDismissible: !forceUpdate,
+        // barrierDismissible: !forceUpdate,
+        barrierDismissible: false,
         context: context,
         builder: (builder) {
           return CupertinoAlertDialog(
@@ -62,7 +63,8 @@ class InnerFunctions {
   showAndroidPopUp( bool forceUpdate, String title,
       String content, String? androidAppId,VoidCallback onNotNowCLick) {
     return showDialog(
-        barrierDismissible: !forceUpdate,
+        // barrierDismissible: !forceUpdate,
+        barrierDismissible: false,
         context: context,
         builder: (builder) {
           return AlertDialog(
