@@ -1,15 +1,15 @@
 name: update_handler
 description: This package is used for Update handling. There are two types of update Force Update - Soft Update
-version: 0.0.8
+version: 0.0.9
 homepage: https://vaibhavchandolia.info
 repository: https://github.com/vaibhav13062/update_handler
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
+  sdk: ">=2.17.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
-  package_info_plus: ^1.3.0
+  package_info_plus: ^4.0.0
   store_redirect: ^2.0.1
   flutter:
     sdk: flutter
